@@ -1,0 +1,99 @@
+# Day7
+
+Day 06 :OOPS TASK 
+
+1, https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+2, https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+3, Write a “person” class to hold all the details.
+4, write a class to calculate the uber price.
+
+1,Practice/Movie:
+
+Question: Implement a Movie class with properties and methods related to movies.
+Answer: The answer can be found in the provided GitHub link: Practice/Movie
+
+2,Practice/Class Circle:
+
+Question: Create a Circle class and implement various methods for circle operations.
+Answer: The answer can be found in the provided GitHub link: Practice/Class Circle
+
+3,Write a "person" class to hold all the details:
+
+Question: Implement a Person class to store and manage details of a person.
+Answer: The implementation of the Person class will depend on the specific details and requirements you want to include. Here's a basic 
+
+example:
+
+class Person {
+  constructor(name, age, city) {
+    this.name = name;
+    this.age = age;
+    this.city = city;
+  }
+
+  getInfo() {
+    return `Name: ${this.name}, Age: ${this.age}, City: ${this.city}`;
+  }
+}
+
+// Usage
+const person = new Person("John Doe", 25, "New York");
+console.log(person.getInfo());
+
+
+4,Write a class to calculate the Uber price:
+
+Question: Implement a class to calculate the price for an Uber ride based on various factors.
+Answer: The implementation of the UberPriceCalculator class will depend on the specific factors and pricing rules you want to consider.
+
+Here's a basic example:
+
+class UberPriceCalculator {
+  constructor(distance, duration) {
+    this.distance = distance;
+    this.duration = duration;
+  }
+
+  calculatePrice() {
+    // Perform calculations based on distance, duration, and other factors
+    // Return the calculated price
+  }
+}
+
+// Usage
+const uberRide = new UberPriceCalculator(10, 30);
+console.log(uberRide.calculatePrice());
+
+
+Day 07: ARRAY METHODS
+
+1,Solving problems using array functions on the rest countries' data:
+Question: Perform various tasks using array functions on the data retrieved from the "restcountries.com" API.
+Answers:
+a. Get all the countries from the Asia continent/region using the Filter function
+
+const asiaCountries = countries.filter(country => country.region === "Asia");
+console.log(asiaCountries);
+
+b. Get all the countries with a population of less than 2 lakhs using the Filter function:
+
+const countriesWithLowPopulation = countries.filter(country => country.population < 200000);
+console.log(countriesWithLowPopulation);
+
+c. Print the name, capital, and flag of each country using the forEach function:
+
+countries.forEach(country => {
+  console.log("Name:", country.name);
+  console.log("Capital:", country.capital);
+  console.log("Flag:", country.flag);
+});
+
+d. Calculate and print the total population of all countries using the reduce function:
+
+const totalPopulation = countries.reduce((acc, country) => acc + country.population, 0);
+console.log("Total Population:", totalPopulation);
+
+e. Find and print the country that uses US Dollars as currency using the find function:
+
+const countryWithUSD = countries.find(country => country.currencies.includes("USD"));
+console.log(countryWithUSD);
